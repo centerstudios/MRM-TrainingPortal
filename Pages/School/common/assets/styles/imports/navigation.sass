@@ -1,0 +1,251 @@
+/* variables
+@import '../includes/mixins'
+@import '../includes/vars'
+
+$blue: #333742
+$orange: #ff5e43
+$gray: #9e9e9e
+$medium-gray: #595960
+$dark-gray: #2f313c
+$dark-blue: #2e313c
+$nav: #3e474f
+$nav2: #455463
+
+body
+  animation: bugfix infinite 1s
+  // fixed android bug
+  position: relative
+@-webkit-keyframes bugfix
+  from
+    padding: 0
+  to
+    padding: 0
+
+.content
+  &::after
+    +clearfix
+.content-inner
+  float: left
+  width: 100%
+  margin-left: 0
+  transition: all 0.55s ease-in-out 0s
+
+/* Desktop nav
++bp(tablet)
+  .content
+    width: calc(100% - 50px)
+    height: 100%
+    position: relative
+    left: 50px
+  .side-bar
+    position: fixed
+    left: 0
+    width: 50px
+    height: 100%
+    z-index: 101
+    background: $main_gray
+    ul
+      li
+        color: $main_accent
+        text-align: center
+        margin-bottom: 28px
+        position: relative
+        &:hover
+          color: #fafafa
+          cursor: pointer
+          span
+            opacity: 1
+            left: 60px
+            visibility: visible
+        &:first-child
+          margin-top: 20px
+        &:last-child
+          margin-bottom: 0
+        //Nav Tooltips
+        span
+          visibility: hidden
+          top: 0
+          left: 65px
+          background: $nav
+          color: #fff
+          border-radius: 5px
+          padding: 0 14px
+          line-height: 38px
+          white-space: nowrap
+          z-index: 155
+          opacity: 0
+          position: absolute
+          &::after
+            position: absolute
+            content: ""
+            background: darken($nav,4%)
+            width: 10px
+            height: 10px
+            border-radius: 0 0 0 3px
+            -ms-transform: rotate(45deg)
+            transform: rotate(45deg)
+            -moz-transform: rotate(45deg)
+            -webkit-transform: rotate(45deg)
+            top: 14px
+            left: -5px
+        &.active
+          padding: 8px
+          border-radius: 5px
+          background-color: darken( $nav, 4% )
+          i
+            font-weight: normal
+            color: #66DFAE
+        a
+          color: inherit
+          text-decoration: none
+          i
+            font-weight: bold
+            font-size: 22px
+      &.main-nav
+        margin: 5px
+      &.bottom-links
+        position: absolute
+        bottom: 25px
+        left: 50%
+        transform: translateX(-50%)
+        -webkit-transform: translate(-50%)
+        -moz-transform: translate(-50)
+        margin: 0
+        li
+          i
+            font-weight: bold
+            font-size: 24px
+
+/* menu icon
+.menu-icon-container
+  display: block
+  float: right
+  height: 65px
+  position: relative
+  z-index: 999999
+  +bp(tablet)
+    display: none
+
+.menu-icon
+  cursor: pointer
+  height: 40px
+  position: relative
+  top: 22px
+  right: 20px
+  transition: all 0.15s linear
+  width: 40px
+
+.menu-global
+  backface-visibility: hidden
+  border-top: 2px solid white
+  left: 0
+  position: absolute
+  transition: all 0.15s linear
+  width: 96%
+
+.menu-top
+  top: 0px
+
+.menu-middle
+  top: 12px
+
+.menu-bottom
+  top: 24px
+
+.menu-top-click
+  top: 19px
+  transform: rotate(48deg)
+  -webkit-transform: rotate(48deg)
+  -moz-transform: rotate(48deg)
+.menu-middle-click
+  opacity: 0
+
+.menu-bottom-click
+  top: 19px
+  transform: rotate(-48deg)
+  -webkit-transform: rotate(-48deg)
+  -moz-transform: rotate(-48deg)
+
+/* gets rid of the browser-created checkbox
+
+#toggle
+  position: absolute
+  left: -4000px
+
+/* styles the nav position
+@media (max-width: 766px)
+  .content-wrap
+    .side-bar
+      background: $nav2
+      height: 100%
+      overflow: auto
+      right: -300px
+      left: inherit
+      top: 0
+      padding: 0
+      position: fixed
+      width: 315px
+      transition: all 0.55s ease-in-out 0s
+  /* styles the nav
+  .main-nav,
+  .bottom-links
+    margin: 5px
+    li
+      width: 100%
+      &.active
+        a
+          background-color: darken($nav2, 9%)
+          border-radius: 5px
+          color: #fafafa
+      a
+        display: inline-block
+        padding: 0 10px
+        display: block
+        position: relative
+        height: 100%
+        line-height: 50px
+        color: #A4B1BC
+        width: 100%
+        i
+          display: none
+
+      span
+        display: inline-block
+  .bottom-links
+    width: 100%
+    margin: 0
+    border-top: 1px solid darken($nav2, 5%)
+    li
+      margin: 5px
+      width: 305px
+
+  /* when the menu is clicked / checkbox checked
+  input
+    &:checked ~ .side-bar
+      right: 0
+      z-index: 101
+      +bp(tablet)
+        background: transparent
+        height: auto
+        float: right
+        padding: 0
+        position: static
+        width: 100%
+        transition: all 0.55s ease-in-out 0s
+    &:checked ~ .content .content-inner
+      position: fixed
+      transform: translateX(-315px)
+      -webkit-transform: translateX(-315px)
+      -moz-transform: translateX(-315px)
+      +bp(tablet)
+        margin-left: 0%
+        position: static
+        transition: all 0.55s ease-in-out 0s
+  .content-wrap
+    .content
+      height: 100%
+      padding: 0
+      left: inherit
+      width: 100%
+      &::after
+        +clearfix

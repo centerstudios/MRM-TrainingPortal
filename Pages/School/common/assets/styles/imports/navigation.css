@@ -1,0 +1,294 @@
+/* variables */
+/* mixins */
+/* line 14, /Users/sawyerbateman/Projects/The Center/Learning Center/Pages/School/common/assets/styles/imports/navigation.sass */
+body {
+  animation: bugfix infinite 1s;
+  position: relative; }
+
+@-webkit-keyframes bugfix {
+  from {
+    padding: 0; }
+  to {
+    padding: 0; } }
+
+/* line 25, /Users/sawyerbateman/Projects/The Center/Learning Center/Pages/School/common/assets/styles/imports/navigation.sass */
+.content::after {
+  clear: both;
+  content: "";
+  display: table; }
+
+/* line 27, /Users/sawyerbateman/Projects/The Center/Learning Center/Pages/School/common/assets/styles/imports/navigation.sass */
+.content-inner {
+  float: left;
+  width: 100%;
+  margin-left: 0;
+  transition: all 0.55s ease-in-out 0s; }
+
+/* Desktop nav */
+@media (min-width: 760px) {
+  /* line 35, /Users/sawyerbateman/Projects/The Center/Learning Center/Pages/School/common/assets/styles/imports/navigation.sass */
+  .content {
+    width: calc(100% - 50px);
+    height: 100%;
+    position: relative;
+    left: 50px; }
+  /* line 40, /Users/sawyerbateman/Projects/The Center/Learning Center/Pages/School/common/assets/styles/imports/navigation.sass */
+  .side-bar {
+    position: fixed;
+    left: 0;
+    width: 50px;
+    height: 100%;
+    z-index: 101;
+    background: #404951; }
+    /* line 48, /Users/sawyerbateman/Projects/The Center/Learning Center/Pages/School/common/assets/styles/imports/navigation.sass */
+    .side-bar ul li {
+      color: #7F8393;
+      text-align: center;
+      margin-bottom: 28px;
+      position: relative; }
+      /* line 53, /Users/sawyerbateman/Projects/The Center/Learning Center/Pages/School/common/assets/styles/imports/navigation.sass */
+      .side-bar ul li:hover {
+        color: #fafafa;
+        cursor: pointer; }
+        /* line 56, /Users/sawyerbateman/Projects/The Center/Learning Center/Pages/School/common/assets/styles/imports/navigation.sass */
+        .side-bar ul li:hover span {
+          opacity: 1;
+          left: 60px;
+          visibility: visible; }
+      /* line 60, /Users/sawyerbateman/Projects/The Center/Learning Center/Pages/School/common/assets/styles/imports/navigation.sass */
+      .side-bar ul li:first-child {
+        margin-top: 20px; }
+      /* line 62, /Users/sawyerbateman/Projects/The Center/Learning Center/Pages/School/common/assets/styles/imports/navigation.sass */
+      .side-bar ul li:last-child {
+        margin-bottom: 0; }
+      /* line 65, /Users/sawyerbateman/Projects/The Center/Learning Center/Pages/School/common/assets/styles/imports/navigation.sass */
+      .side-bar ul li span {
+        visibility: hidden;
+        top: 0;
+        left: 65px;
+        background: #3e474f;
+        color: #fff;
+        border-radius: 5px;
+        padding: 0 14px;
+        line-height: 38px;
+        white-space: nowrap;
+        z-index: 155;
+        opacity: 0;
+        position: absolute; }
+        /* line 78, /Users/sawyerbateman/Projects/The Center/Learning Center/Pages/School/common/assets/styles/imports/navigation.sass */
+        .side-bar ul li span::after {
+          position: absolute;
+          content: "";
+          background: #353d44;
+          width: 10px;
+          height: 10px;
+          border-radius: 0 0 0 3px;
+          -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
+          -moz-transform: rotate(45deg);
+          -webkit-transform: rotate(45deg);
+          top: 14px;
+          left: -5px; }
+      /* line 91, /Users/sawyerbateman/Projects/The Center/Learning Center/Pages/School/common/assets/styles/imports/navigation.sass */
+      .side-bar ul li.active {
+        padding: 8px;
+        border-radius: 5px;
+        background-color: #353d44; }
+        /* line 95, /Users/sawyerbateman/Projects/The Center/Learning Center/Pages/School/common/assets/styles/imports/navigation.sass */
+        .side-bar ul li.active i {
+          font-weight: normal;
+          color: #66DFAE; }
+      /* line 98, /Users/sawyerbateman/Projects/The Center/Learning Center/Pages/School/common/assets/styles/imports/navigation.sass */
+      .side-bar ul li a {
+        color: inherit;
+        text-decoration: none; }
+        /* line 101, /Users/sawyerbateman/Projects/The Center/Learning Center/Pages/School/common/assets/styles/imports/navigation.sass */
+        .side-bar ul li a i {
+          font-weight: bold;
+          font-size: 22px; }
+    /* line 104, /Users/sawyerbateman/Projects/The Center/Learning Center/Pages/School/common/assets/styles/imports/navigation.sass */
+    .side-bar ul.main-nav {
+      margin: 5px; }
+    /* line 106, /Users/sawyerbateman/Projects/The Center/Learning Center/Pages/School/common/assets/styles/imports/navigation.sass */
+    .side-bar ul.bottom-links {
+      position: absolute;
+      bottom: 25px;
+      left: 50%;
+      transform: translateX(-50%);
+      -webkit-transform: translate(-50%);
+      -moz-transform: translate(-50);
+      margin: 0; }
+      /* line 115, /Users/sawyerbateman/Projects/The Center/Learning Center/Pages/School/common/assets/styles/imports/navigation.sass */
+      .side-bar ul.bottom-links li i {
+        font-weight: bold;
+        font-size: 24px; } }
+
+/* menu icon */
+/* line 120, /Users/sawyerbateman/Projects/The Center/Learning Center/Pages/School/common/assets/styles/imports/navigation.sass */
+.menu-icon-container {
+  display: block;
+  float: right;
+  height: 65px;
+  position: relative;
+  z-index: 999999; }
+  @media (min-width: 760px) {
+    /* line 120, /Users/sawyerbateman/Projects/The Center/Learning Center/Pages/School/common/assets/styles/imports/navigation.sass */
+    .menu-icon-container {
+      display: none; } }
+
+/* line 129, /Users/sawyerbateman/Projects/The Center/Learning Center/Pages/School/common/assets/styles/imports/navigation.sass */
+.menu-icon {
+  cursor: pointer;
+  height: 40px;
+  position: relative;
+  top: 22px;
+  right: 20px;
+  transition: all 0.15s linear;
+  width: 40px; }
+
+/* line 138, /Users/sawyerbateman/Projects/The Center/Learning Center/Pages/School/common/assets/styles/imports/navigation.sass */
+.menu-global {
+  backface-visibility: hidden;
+  border-top: 2px solid white;
+  left: 0;
+  position: absolute;
+  transition: all 0.15s linear;
+  width: 96%; }
+
+/* line 146, /Users/sawyerbateman/Projects/The Center/Learning Center/Pages/School/common/assets/styles/imports/navigation.sass */
+.menu-top {
+  top: 0px; }
+
+/* line 149, /Users/sawyerbateman/Projects/The Center/Learning Center/Pages/School/common/assets/styles/imports/navigation.sass */
+.menu-middle {
+  top: 12px; }
+
+/* line 152, /Users/sawyerbateman/Projects/The Center/Learning Center/Pages/School/common/assets/styles/imports/navigation.sass */
+.menu-bottom {
+  top: 24px; }
+
+/* line 155, /Users/sawyerbateman/Projects/The Center/Learning Center/Pages/School/common/assets/styles/imports/navigation.sass */
+.menu-top-click {
+  top: 19px;
+  transform: rotate(48deg);
+  -webkit-transform: rotate(48deg);
+  -moz-transform: rotate(48deg); }
+
+/* line 160, /Users/sawyerbateman/Projects/The Center/Learning Center/Pages/School/common/assets/styles/imports/navigation.sass */
+.menu-middle-click {
+  opacity: 0; }
+
+/* line 163, /Users/sawyerbateman/Projects/The Center/Learning Center/Pages/School/common/assets/styles/imports/navigation.sass */
+.menu-bottom-click {
+  top: 19px;
+  transform: rotate(-48deg);
+  -webkit-transform: rotate(-48deg);
+  -moz-transform: rotate(-48deg); }
+
+/* gets rid of the browser-created checkbox */
+/* line 171, /Users/sawyerbateman/Projects/The Center/Learning Center/Pages/School/common/assets/styles/imports/navigation.sass */
+#toggle {
+  position: absolute;
+  left: -4000px; }
+
+/* styles the nav position */
+@media (max-width: 766px) {
+  /* line 178, /Users/sawyerbateman/Projects/The Center/Learning Center/Pages/School/common/assets/styles/imports/navigation.sass */
+  .content-wrap .side-bar {
+    background: #455463;
+    height: 100%;
+    overflow: auto;
+    right: -300px;
+    left: inherit;
+    top: 0;
+    padding: 0;
+    position: fixed;
+    width: 315px;
+    transition: all 0.55s ease-in-out 0s; }
+  /* styles the nav */
+  /* line 191, /Users/sawyerbateman/Projects/The Center/Learning Center/Pages/School/common/assets/styles/imports/navigation.sass */
+  .main-nav,
+  .bottom-links {
+    margin: 5px; }
+    /* line 193, /Users/sawyerbateman/Projects/The Center/Learning Center/Pages/School/common/assets/styles/imports/navigation.sass */
+    .main-nav li,
+    .bottom-links li {
+      width: 100%; }
+      /* line 196, /Users/sawyerbateman/Projects/The Center/Learning Center/Pages/School/common/assets/styles/imports/navigation.sass */
+      .main-nav li.active a,
+      .bottom-links li.active a {
+        background-color: #323d48;
+        border-radius: 5px;
+        color: #fafafa; }
+      /* line 200, /Users/sawyerbateman/Projects/The Center/Learning Center/Pages/School/common/assets/styles/imports/navigation.sass */
+      .main-nav li a,
+      .bottom-links li a {
+        display: inline-block;
+        padding: 0 10px;
+        display: block;
+        position: relative;
+        height: 100%;
+        line-height: 50px;
+        color: #A4B1BC;
+        width: 100%; }
+        /* line 209, /Users/sawyerbateman/Projects/The Center/Learning Center/Pages/School/common/assets/styles/imports/navigation.sass */
+        .main-nav li a i,
+        .bottom-links li a i {
+          display: none; }
+      /* line 212, /Users/sawyerbateman/Projects/The Center/Learning Center/Pages/School/common/assets/styles/imports/navigation.sass */
+      .main-nav li span,
+      .bottom-links li span {
+        display: inline-block; }
+  /* line 214, /Users/sawyerbateman/Projects/The Center/Learning Center/Pages/School/common/assets/styles/imports/navigation.sass */
+  .bottom-links {
+    width: 100%;
+    margin: 0;
+    border-top: 1px solid #3b4754; }
+    /* line 218, /Users/sawyerbateman/Projects/The Center/Learning Center/Pages/School/common/assets/styles/imports/navigation.sass */
+    .bottom-links li {
+      margin: 5px;
+      width: 305px; }
+  /* when the menu is clicked / checkbox checked */
+  /* line 224, /Users/sawyerbateman/Projects/The Center/Learning Center/Pages/School/common/assets/styles/imports/navigation.sass */
+  input:checked ~ .side-bar {
+    right: 0;
+    z-index: 101; } }
+  @media (max-width: 766px) and (min-width: 760px) {
+    /* line 224, /Users/sawyerbateman/Projects/The Center/Learning Center/Pages/School/common/assets/styles/imports/navigation.sass */
+    input:checked ~ .side-bar {
+      background: transparent;
+      height: auto;
+      float: right;
+      padding: 0;
+      position: static;
+      width: 100%;
+      transition: all 0.55s ease-in-out 0s; } }
+
+@media (max-width: 766px) {
+  /* line 235, /Users/sawyerbateman/Projects/The Center/Learning Center/Pages/School/common/assets/styles/imports/navigation.sass */
+  input:checked ~ .content .content-inner {
+    position: fixed;
+    transform: translateX(-315px);
+    -webkit-transform: translateX(-315px);
+    -moz-transform: translateX(-315px); } }
+  @media (max-width: 766px) and (min-width: 760px) {
+    /* line 235, /Users/sawyerbateman/Projects/The Center/Learning Center/Pages/School/common/assets/styles/imports/navigation.sass */
+    input:checked ~ .content .content-inner {
+      margin-left: 0%;
+      position: static;
+      transition: all 0.55s ease-in-out 0s; } }
+
+@media (max-width: 766px) {
+  /* line 245, /Users/sawyerbateman/Projects/The Center/Learning Center/Pages/School/common/assets/styles/imports/navigation.sass */
+  .content-wrap .content {
+    height: 100%;
+    padding: 0;
+    left: inherit;
+    width: 100%; }
+    /* line 250, /Users/sawyerbateman/Projects/The Center/Learning Center/Pages/School/common/assets/styles/imports/navigation.sass */
+    .content-wrap .content::after {
+      clear: both;
+      content: "";
+      display: table; } }
+
+/*# sourceMappingURL=navigation.css.map */
