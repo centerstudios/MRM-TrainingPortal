@@ -59,8 +59,8 @@ app.directive('quiz', function(quizFactory) {
 app.factory('quizFactory', function() {
   var questions = [
     {
-      question: "What is the Difference Between #000 and #fff?",
-      options: ["#000 is black, and #fff is not a color.", "#000 is black and #fff is White.", "They are both the same color", "Codes are not colors."],
+      question: "What does Kody Want you to do in the first video",
+      options: ["watch the next video.", "Delete all of your contacts", "Watch the totorial and Import your contacts into the system", "Nothing"],
       answer: 1
     },
     {
@@ -95,4 +95,3 @@ app.factory('quizFactory', function() {
     }
   };
 });
-
