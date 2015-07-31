@@ -5,6 +5,7 @@
   background: #F3F6F9
   [class*="col-"]
     padding: 0 3px 6px 3px
+    position: relative
     img
       width: 100%
 .hide
@@ -39,6 +40,7 @@
     line-height: 43px
     background: #66DFAE
     outline: none
+    text-align: center
     &::after
       font-family: 'icomoon'
       content: '\e647'
@@ -79,7 +81,7 @@
     padding: 15px 5px
   .tile-tint
     padding: 0 3px 6px 3px
-    background-color: rgba(23, 29, 42, 0.21)
+    background-color: $tile-tint
     position: absolute
     top: 0
     width: 98%
@@ -89,11 +91,46 @@
       position: absolute
       bottom: 15px
       left: 15px
-    .class-title
-      margin: 0
-      font-size: 17px
-    .class-description
-      margin: 0
-      line-height: 15px
-      font-size: 11px
-      font-weight: 200
+      .class-title
+        margin: 0
+        font-size: 17px
+      .class-description
+        margin: 0
+        line-height: 15px
+        font-size: 11px
+        font-weight: 200
+    .class-info
+      display: none
+      position: absolute
+      z-index: 100
+      top: 50%
+      left: 50%
+      transform: translate(-50%, -50%)
+      -webkit-transform: translate(-50%, -50%)
+      -moz-transform: translate(-50%, -50%)
+      width: 100%
+      text-align: center
+      h1
+        font-size: 22px
+        margin: 0
+        font-weight: 400
+        text-transform: uppercase
+        letter-spacing: 5px
+      p
+        font-size: 16px
+        margin: 0
+        font-weight: lighter
+      .bubbles
+        margin-top: 20px
+        width: 30px
+        height: 30px
+        border-radius: 100%
+        margin-right: 5px
+        &:last-child
+          margin-right: 0
+    &:hover
+      background-color: rgba(51, 51, 51, 0.56)
+      .tile-text
+        display: none
+      .class-info
+        display: block
