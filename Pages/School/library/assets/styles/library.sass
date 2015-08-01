@@ -8,6 +8,8 @@
     position: relative
     img
       width: 100%
+    @media(max-width: 399px)
+      width: 100%
 .hide
   display: none
 .top-lib
@@ -36,8 +38,7 @@
     border: 0
     width: 45px
     height: 45px
-    font-size: 25px
-    line-height: 43px
+    font-size: 21px
     background: #66DFAE
     outline: none
     text-align: center
@@ -84,8 +85,8 @@
     background-color: $tile-tint
     position: absolute
     top: 0
-    width: 98%
-    height: 98%
+    width: calc(100% - 6px)
+    height: calc(100% - 6px)
     color: #fafafa
     .tile-text
       position: absolute
