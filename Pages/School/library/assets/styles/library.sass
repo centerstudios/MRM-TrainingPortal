@@ -8,6 +8,8 @@
     position: relative
     img
       width: 100%
+    @media(max-width: 399px)
+      width: 100%
 .hide
   display: none
 .top-lib
@@ -45,6 +47,7 @@
       font-family: 'icomoon'
       content: '\e647'
       color: #fafafa
+      text-align: center
 
 .search-titlebar
   height: 55px
@@ -84,8 +87,8 @@
     background-color: $tile-tint
     position: absolute
     top: 0
-    width: 98%
-    height: 98%
+    width: calc(100% - 6px)
+    height: calc(100% - 6px)
     color: #fafafa
     .tile-text
       position: absolute
