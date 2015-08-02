@@ -30,6 +30,7 @@ $.ajax({
     console.log(error, status, thrown);
   }
 });
+
 function buildCurriculumItems(){
   curriculumItems.forEach(function(item, index){
     var li = $('<li class="video-track">'+item.title+'</li>');
@@ -91,6 +92,7 @@ $player.on('playing',function(){
   hideVideoControls()
   $playButton.removeClass('icon-play-arrow').addClass('icon-pause');
 }).on('ended',function(){
+  $('.video-track.active i').removeClass('icon-play-circle-outline').addClass('icon-check-box2');
   if (activeItem.id === (curriculumItems.length - 2)){
     $nextButton.hide();
     $quizButton.show();

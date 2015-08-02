@@ -1,3 +1,4 @@
+@import '../includes/vars'
 //Scaffolding
 .content-wrap
   height: 100%
@@ -142,14 +143,74 @@
     display: none
     width: 100%
     height: 500px
+    .video-success
+      width: 100%
+      position: absolute
+      top: 25%
+      left: 50%
+      -webkit-transform: translate(-50%, -50%)
+      transform: translate(-50%, -50%)
+      h1
+        text-transform: uppercase
+        text-align: center
+        color: #fafafa
+        font-weight: 400
+        font-size: 22px
+        letter-spacing: 3px
+        @media (max-width: 515px)
+          font-size: 16px
+
+      //Check Mark annimation
+      .checkmark__circle
+        stroke-dasharray: 166
+        stroke-dashoffset: 166
+        stroke-width: 2
+        stroke-miterlimit: 10
+        stroke: #5FCF80
+        fill: none
+        animation: stroke 0.6s cubic-bezier(0.65, 0, 0.45, 1) forwards
+      .checkmark
+        width: 56px
+        height: 56px
+        margin: 0 auto
+        border-radius: 50%
+        display: block
+        stroke-width: 2
+        stroke: #fff
+        stroke-miterlimit: 10
+        box-shadow: inset 0px 0px 0px #5FCF80
+        animation: fill .4s ease-in-out .4s forwards, scale .3s ease-in-out .9s both
+      .checkmark__check
+        transform-origin: 50% 50%
+        stroke-dasharray: 48
+        stroke-dashoffset: 48
+        animation: stroke 0.3s cubic-bezier(0.65, 0, 0.45, 1) 0.8s forwards
+      @keyframes stroke
+        100%
+          stroke-dashoffset: 0
+      @keyframes scale
+        0%, 100%
+          transform: none
+        50%
+          transform: scale3d(1.1, 1.1, 1)
+      @keyframes fill
+        100%
+          box-shadow: inset 0px 0px 0px 30px #5FCF80
+
     .actions
       position: relative
       text-align: center
+      width: 100%
       top: 50%
       transform: translateY(-50%)
       -webkit-transform: translateY(-50%)
       -moz-transform: translateY(-50%)
       -o-transform: translateY(-50%)
+      @media (max-width: 515px)
+        -webkit-transform: translateY(-15%)
+        -moz-transform: translateY(-15%)
+        -o-transform: translateY(-15%)
+        transform: translateY(-15%)
     .rewatch
       font-size: 18px
       border: 4px solid #75809C
@@ -159,6 +220,7 @@
       outline: none
       color: #fff
       cursor: pointer
+      margin-right: 20px
       &::before
         content: '\e745'
         font-family: 'icomoon'
@@ -396,19 +458,18 @@
             color: #707483
             cursor: pointer
             &.active
-              color: #fff !important
-              font-weight: bold
-              background: #5FCF80
-              i
-                color: #fff
-              .time-total
-                color: #fff
+              background: #DFE3E6
+              border: 1px solid #D1D6D9
             i
               font-size: 25px
               position: relative
               top: 4px
               left: 20px
               margin-right: 45px
+              &.icon-check-box2
+                font-size: 20px
+                left: 23px
+                color: $base_green
               &.icon-points_expense
                 font-size: 22px
             .time-total
