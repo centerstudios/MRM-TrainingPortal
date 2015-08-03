@@ -92,17 +92,13 @@
   .content-wrap .content .icon-badge {
     right: 65px; }
   /* line 84, /Users/sawyerbateman/Projects/MRM-Training/Pages/School/classes/assets/styles/class.sass */
-  .content-wrap .acc-container .accordion .acc-open .acc-drawer {
-    position: relative;
-    bottom: 4px; }
-  /* line 87, /Users/sawyerbateman/Projects/MRM-Training/Pages/School/classes/assets/styles/class.sass */
   .content-wrap .acc-container .accordion .acc-open .acc-drawer li.video-track a {
     font-size: 12px; }
-  /* line 89, /Users/sawyerbateman/Projects/MRM-Training/Pages/School/classes/assets/styles/class.sass */
+  /* line 86, /Users/sawyerbateman/Projects/MRM-Training/Pages/School/classes/assets/styles/class.sass */
   .content-wrap .acc-container .accordion .acc-open .acc-drawer li.video-track a i {
     margin-right: 15px;
     left: 5px; }
-  /* line 94, /Users/sawyerbateman/Projects/MRM-Training/Pages/School/classes/assets/styles/class.sass */
+  /* line 91, /Users/sawyerbateman/Projects/MRM-Training/Pages/School/classes/assets/styles/class.sass */
   .content-wrap .acc-container li a .feature-content {
     display: inline-block;
     position: relative;
@@ -110,58 +106,45 @@
     width: calc(90% - 45px);
     float: left;
     padding-bottom: 25px; }
-    /* line 101, /Users/sawyerbateman/Projects/MRM-Training/Pages/School/classes/assets/styles/class.sass */
+    /* line 98, /Users/sawyerbateman/Projects/MRM-Training/Pages/School/classes/assets/styles/class.sass */
     .content-wrap .acc-container li a .feature-content h3 {
       font-size: 12px; }
-    /* line 103, /Users/sawyerbateman/Projects/MRM-Training/Pages/School/classes/assets/styles/class.sass */
+    /* line 100, /Users/sawyerbateman/Projects/MRM-Training/Pages/School/classes/assets/styles/class.sass */
     .content-wrap .acc-container li a .feature-content p {
       margin-top: 4px;
-      font-size: 12px; }
-  /* line 106, /Users/sawyerbateman/Projects/MRM-Training/Pages/School/classes/assets/styles/class.sass */
-  .content-wrap .acc-container li a .badge-container {
-    float: left; }
-  /* line 108, /Users/sawyerbateman/Projects/MRM-Training/Pages/School/classes/assets/styles/class.sass */
-  .content-wrap .acc-container li a .badge {
-    display: inline-block;
-    width: 65px;
-    height: 65px;
-    border-radius: 100%;
-    position: relative;
-    float: left;
-    top: 25px;
-    left: 15px; } }
+      font-size: 12px; } }
 
 @media screen and (max-width: 625px) {
-  /* line 121, /Users/sawyerbateman/Projects/MRM-Training/Pages/School/classes/assets/styles/class.sass */
+  /* line 107, /Users/sawyerbateman/Projects/MRM-Training/Pages/School/classes/assets/styles/class.sass */
   .content-wrap .content .icon-badge {
     right: 25px; }
-  /* line 124, /Users/sawyerbateman/Projects/MRM-Training/Pages/School/classes/assets/styles/class.sass */
+  /* line 110, /Users/sawyerbateman/Projects/MRM-Training/Pages/School/classes/assets/styles/class.sass */
   .content-wrap .content .hero-top .hero-center {
     width: 60%; } }
 
 @media screen and (max-width: 530px) {
-  /* line 129, /Users/sawyerbateman/Projects/MRM-Training/Pages/School/classes/assets/styles/class.sass */
+  /* line 115, /Users/sawyerbateman/Projects/MRM-Training/Pages/School/classes/assets/styles/class.sass */
   .content-wrap .content .hero-button {
     position: relative;
     display: block;
     margin: 15px auto;
     right: 0; }
-  /* line 134, /Users/sawyerbateman/Projects/MRM-Training/Pages/School/classes/assets/styles/class.sass */
+  /* line 120, /Users/sawyerbateman/Projects/MRM-Training/Pages/School/classes/assets/styles/class.sass */
   .content-wrap .content .hero-top {
     padding-left: 0;
     height: 480px; }
-    /* line 137, /Users/sawyerbateman/Projects/MRM-Training/Pages/School/classes/assets/styles/class.sass */
+    /* line 123, /Users/sawyerbateman/Projects/MRM-Training/Pages/School/classes/assets/styles/class.sass */
     .content-wrap .content .hero-top .hero-center {
       width: 90%;
       display: block;
       margin: 0 auto; }
-      /* line 141, /Users/sawyerbateman/Projects/MRM-Training/Pages/School/classes/assets/styles/class.sass */
+      /* line 127, /Users/sawyerbateman/Projects/MRM-Training/Pages/School/classes/assets/styles/class.sass */
       .content-wrap .content .hero-top .hero-center p {
         font-size: 14px; }
-      /* line 143, /Users/sawyerbateman/Projects/MRM-Training/Pages/School/classes/assets/styles/class.sass */
+      /* line 129, /Users/sawyerbateman/Projects/MRM-Training/Pages/School/classes/assets/styles/class.sass */
       .content-wrap .content .hero-top .hero-center .title {
         margin-top: 140px; }
-  /* line 145, /Users/sawyerbateman/Projects/MRM-Training/Pages/School/classes/assets/styles/class.sass */
+  /* line 131, /Users/sawyerbateman/Projects/MRM-Training/Pages/School/classes/assets/styles/class.sass */
   .content-wrap .content .icon-badge {
     width: 100px;
     height: 100px;
@@ -172,7 +155,7 @@
     -moz-transform: translateX(-50%);
     -o-transform: translateX(-50%);
     transform: translateX(-50%); }
-    /* line 155, /Users/sawyerbateman/Projects/MRM-Training/Pages/School/classes/assets/styles/class.sass */
+    /* line 141, /Users/sawyerbateman/Projects/MRM-Training/Pages/School/classes/assets/styles/class.sass */
     .content-wrap .content .icon-badge img {
       margin-top: 28px; } }
 
