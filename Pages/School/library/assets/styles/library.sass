@@ -1,17 +1,27 @@
 //Variable Colors
 @import '../../../common/assets/styles/includes/vars.sass'
-
+html
+  background-color: #FAFAFC
 .content
-  background: #F3F6F9
   [class*="col-"]
     padding: 0 3px 6px 3px
     position: relative
     img
       width: 100%
+      height: auto
     @media(max-width: 399px)
       width: 100%
+.row
+  .section-desc
+    font-size: 18px
+    font-weight: 200
+    color: #858585
+    margin: 20px 0 15px 2px
 .hide
   display: none
+.end-section
+  border-bottom: 1px solid #DFE2E2
+  margin: 35px 0 20px 0
 .top-lib
   height: 170px
   background: #455463
@@ -100,6 +110,9 @@
         line-height: 15px
         font-size: 11px
         font-weight: 200
+      span
+        color: #70DCA4
+        font-size: 16px
     .class-info
       display: none
       position: absolute
