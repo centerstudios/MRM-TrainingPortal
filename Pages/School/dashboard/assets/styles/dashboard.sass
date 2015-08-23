@@ -1,0 +1,292 @@
+$db-background: #FAFAFC
+$border-color: #ECF0F1
+$default: #EAEEEF
+$title-color: #BBBBBD
+$badge-red: #F97669
+$badge-green: #A4D381
+$badge-blue: #81CFD3
+$waiting: #ED8585
+$tile-color: #859CB0
+html
+  background-color: $db-background
+.db-container
+  width: 100%
+  height: 100%
+  overflow: auto
+  background-color: $db-background
+  .db-inner
+    padding: 0 40px 0 40px
+    @media (max-width: 767px)
+      padding: 0 15px 0 15px
+  .section-title
+    border-bottom: 1px solid $border-color
+    position: relative
+    z-index: 1
+    color: $title-color
+    font-size: 18px
+    font-weight: 300
+    margin-top: 30px
+    span
+      display: block
+      margin: 0 auto
+      width: 150px
+      background-color: $db-background
+      position: relative
+      z-index: 2
+      top: 13px
+      text-align: center
+  .pt-container
+    margin-top: 40px
+    @media (max-width: 767px)
+      margin-top: 30px
+    .page-title
+      font-size: 18px
+      font-weight: 400
+      color: $title-color
+  .prog-section
+    .prog-container
+      margin-bottom: 50px
+      &:first-of-type
+        margin-top: 50px
+        @media (max-width: 767px)
+          margin-top: 30px
+      .prog-drawer
+        display: none
+      &.drawer-open
+        box-shadow: 0 16px 23px #e0e0e0
+        .prog-drawer
+          width: 100%
+          max-height: 1500px
+          -webkit-transition: all 0.8s ease-in
+          transition: all  0.8s ease-in
+          display: block
+          li
+            border: 1px solid $default
+            padding: 20px
+            &::after
+              content: ''
+              display: table
+              clear: both
+            &.finished
+              .cl-info::before
+                color: $badge-green
+
+            &.unfinished
+              background-color: #fff
+              color: $waiting
+              .cl-status
+                span
+                  color: $waiting
+          .cl-info
+            display: block
+            width: 33.333%
+            float: left
+            &::before
+              float: left
+              content: '\e60f'
+              font-family: 'icomoon'
+              position: relative
+              top: 4px
+              font-size: 25px
+              margin-right: 20px
+              color: $default
+              @media (max-width: 767px)
+                top: 13px
+            &.complete
+              &::before
+                color: $badge-green
+            h1
+              font-size: 15px
+              margin-left: 35px
+              margin-bottom: 0
+              margin-top: 0
+              color: $tile-color
+            span.vid-time
+              color: $tile-color
+            span.vid-status
+              text-align: center
+              color: $tile-color
+            @media (max-width: 767px)
+              width: 100%
+              float: none
+          .cl-status
+            width: 33.333%
+            display: block
+            float: left
+            text-align: center
+            color: $tile-color
+            margin-top: 11px
+            @media (max-width: 767px)
+              display: none
+          .cl-action
+            width: 33.333%
+            display: block
+            float: left
+            text-align: right
+            padding-right: 50px
+            margin-top: 12px
+            a
+              text-decoration: none
+            .button
+              border: 1px solid
+              padding: 5px 28px
+              border-radius: 4px
+              color: $tile-color
+              -webkit-transition: .3s ease-in
+              transition: .3s ease-in
+              &.resume
+                border-color: $waiting
+                color: $waiting
+                &:hover
+                  color: #fff
+                  background: $waiting
+                  font-weight: 400
+            @media (max-width: 767px)
+              width: 100%
+              float: none
+              padding-right: 0
+              text-align: center
+              margin-top: 5px
+              .button
+                font-size: 12px
+      .prog-tile
+        width: 100%
+        background-color: #fff
+        padding: 35px
+        border: 1px solid $border-color
+        cursor: pointer
+        &::after
+          content: ''
+          clear: both
+          display: table
+        @media (max-width: 767px)
+          padding: 25px 18px
+        .badge-container
+          width: 80px
+          height: 80px
+          border-radius: 100%
+          display: block
+          float: left
+          text-align: center
+          img
+            width: 50%
+            margin-top: 18px
+          @media (max-width: 1190px)
+            width: 65px
+            height: 65px
+            img
+              margin-top: 15px
+          @media (max-width: 632px)
+            width: 55px
+            height: 55px
+
+          &.badge-red
+            background-color: $badge-red
+          &.badge-blue
+            background-color: $badge-blue
+        .cl-desc
+          display: block
+          float: left
+          margin-left: 40px
+          width: 30%
+          h1
+            font-size: 16px
+            margin: 0
+            margin-top: 10px
+            color: $tile-color
+          p
+            color: $tile-color
+            margin-top: 5px
+            margin-bottom: 0
+          @media (max-width: 1190px)
+            width: 25%
+            margin-left: 25px
+            h1
+              font-size: 12px
+              margin-top: 0
+            p
+              font-size: 11px
+              line-height: 14px
+          @media (max-width: 991px)
+            width: calc(50% - 90px)
+          @media (max-width: 632px)
+            width: calc(100% - 100px)
+            margin-left: 75px
+            float: none
+            h1
+              font-size: 13px
+            p
+              display: none
+        .prog-badge
+          display: block
+          float: left
+          margin: 12px 50px 0 50px
+          ul
+            padding: 0
+            margin-left: 0
+            margin-bottom: 8px
+            li
+              display: inline-block
+              &::after
+                content: '\e60f'
+                font-family: 'icomoon'
+                font-size: 24px
+                color: $default
+                margin-right: 10px
+                @media (max-width: 1190px)
+                  font-size: 20px
+                  margin-right: 6px
+              &.complete
+                &::after
+                  color: $badge-green
+          @media (max-width: 991px)
+            display: none
+        .prog-bar-container
+          display: block
+          float: left
+          width: 25%
+          margin-left: 40px
+          h1
+            color: $tile-color
+            font-size: 18px
+            font-weight: 400
+            margin: 20px 0
+          .prog-bar
+            height: 4px
+            position: relative
+            background-color: $default
+            span
+              display: block
+              height: 100%
+              background: $badge-green
+          @media(max-width: 1190px)
+            width: 20%
+            h1
+              font-size: 15px
+              margin: 15px 0
+          @media (max-width: 991px)
+            width: calc(50% - 100px)
+          @media (max-width: 675px)
+            width: calc(45% - 100px)
+            float: right
+            margin-left: 0
+            margin-right: 40px
+          @media (max-width: 632px)
+            width: calc(100% - 100px)
+            float: none
+            margin-left: 75px
+            h1
+              font-size: 13px
+              margin: 5px 0
+
+//Navigation Overrides
+.menu-icon
+  top: 15px
+
+.menu-global
+  backface-visibility: hidden
+  border-top: 2px solid #777A9C
+  left: 0
+  position: absolute
+  transition: all 0.15s linear
+  width: 96%
